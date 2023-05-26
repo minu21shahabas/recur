@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<style>
+    td{
+        color: white;
+    }
+    tr{
+        color: white;
+    }
+</style>
+<section>
+    <div class="fixed-top  " style="top: 7rem; margin-left: 20rem;">
+
+
+        <div class="row  ml-2">
+            <div class="col-md-3 "><a class="text-white" style="font-size: 1.5rem;">New Recurring Invoice</a></div>
+        </div>
+
+        <div style="height: 600px; overflow-y: scroll;">
+            <form>
+                <div class="row mb-4 border-top pt-5">
+                    <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Customer Name*</label></div>
+                    <div class="col-sm-10">
+                        <select name="customer">
+                            <option value="">1</option>
+                        </select>
+                    </div>
+                    <div class="row mb-4 pt-3">
+                        <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Place Of Supply*</label></div>
+                        <div class="col-sm-10">
+                            <select name="supply">
+                                <option>1</option>
+                            </select>
+                        </div>
+                        <div class="row mb-4 pt-3">
+                            <div class="col-sm-2"><label for="estimate_number" style="margin-left: 10px;">Entry Type</label></div>
+                            <div class="col-sm-10"><input type="radio" name="type" class="custom-radio"  value="invoice">&nbsp;&nbsp;<label>Invoice</label>&nbsp;&nbsp;&nbsp;&nbsp;
+                              <input type="radio" name="type" class="custom-radio" value="bill" >&nbsp;&nbsp;<label>Bill of Supply</label>
+                        </div>
+                        </div>
+                        <div class="row mb-4  pt-3">
+                            <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Profile Name*</label></div>
+                            <div class="col-sm-10">
+                                <input type="text" name="name" style="width: 50%; height: 35px;">
+                            </div>
+                        </div>
+                        <div class="row mb-4  pt-3">
+                            <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Order Number</label></div>
+                            <div class="col-sm-10">
+                                <input type="text" name="order" style="width: 50%; height: 35px;">
+                            </div>
+                        </div>
+                        <div class="row mb-4  pt-3">
+                            <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Repeat Every *</label></div>
+                            <div class="col-sm-10">
+                               <select style="width: 50%; height: 35px;" name="every">
+                                <option value="2 weeks">2 Weeks</option>
+                                <option value="3 months">3 Months</option>
+                                <option value="2 years">2 Years</option>
+                               </select>
+                            </div>
+                        </div>
+                        <div class="row mb-4  pt-3">
+                            <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Start On</label></div>
+                            <div class="col-sm-10">
+                                <input type="date" name="start" style="width: 50%; height: 35px;">
+                            </div>
+                        </div>
+                        <div class="row mb-4 pt-3">
+                            <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Ends On</label></div>
+                            <div class="col-sm-10">
+                                <input type="date" name="end" style="width: 50%; height: 35px;">
+                            </div>
+                        </div>
+                        <div class="row mb-4  pt-3">
+                            <div class="col-sm-2"><label for="customer_name" style="margin-left: 10px;">Payment Terms</label></div>
+                            <div class="col-sm-10">
+                               <select style="width: 50%; height: 35px;" name="every">
+                                <option value="Net 60">Net 60</option>
+                                <option value="Net 45">Net 45</option>
+                                <option value="Net 30">Net 30</option>
+                                <!-- <option data-toggle="modal" data-target="#payment">Add new Payment Terms </option> -->
+                               </select>
+                            </div>
+                        </div>
+                <div>
+                    <table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th scope="col">Items Details</th>
+                            <th scope="col">Quantity</th>
+                            <th scope="col">Rate</th>
+                            <th scope="col">Discount</th>
+                            <th scope="col">Amount</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                </div>
+                    
+            </form>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- payment modal -->
+<!-- <div class="modal fade" id="payment" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Create New Terms</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div> -->
+{% endblock %}
